@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %} Main page {% endblock %}
+{% block content %}
+    <header>
+        <h1>Психология</h1>
+
+        <h1> {{ title }}</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>О нас</h2>
+        <p>Мы - команда профессиональных психологов и коучей по голосу, готовых помочь вам раскрыть ваш потенциал и улучшить качество вашей жизни.</p>
+    </section>
+
+    <section id="services">
+        <h2>Наши услуги</h2>
+        <ul>
+            <li>Индивидуальные консультации по психологии</li>
+            <li>Тренинги по улучшению голоса и коммуникации</li>
+            <li>Групповые сессии для развития навыков общения</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Контакты</h2>
+        <p>Свяжитесь с нами, чтобы назначить встречу или узнать больше о наших услугах:</p>
+        <address>
+            Email: <a href="mailto:your-email@example.com">your-email@example.com</a><br>
+            Телефон: <a href="tel:+1234567890">+1 (234) 567-890</a><br>
+        </address>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Все права защищены</p>
+    </footer>
+{% endblock %}
+
