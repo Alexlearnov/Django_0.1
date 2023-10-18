@@ -6,3 +6,24 @@ h1 {
   text-align:center;
   color: black;
 }
+
+nav#includes_nav {
+  color: black;
+  align-content: center;
+  text-align: center;
+}
+nav>a{
+  color:green;
+  text-decoration:none;
+}
+nav>a:hover {
+  color: black;
+  text-decoration: underline;
+}
+textarea#text-about-me {
+  background-image: url(../images/1_122.jpg);
+  text-align: center;
+  color: white;
+  font-family: Verdana, sans-serif;
+  font-weight:bold
+}
