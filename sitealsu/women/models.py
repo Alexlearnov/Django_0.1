@@ -3,10 +3,14 @@ from django.urls import reverse
 
 
 class User(models.Model):
+    class Sex(models.IntegerChoices):
+        male = 1, 'male'
+        female = 0, 'female'
+
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=255, db_index=True, unique=True)
-    sex = models.CharField(max_length=6)
+    sex = models.BooleanField(choices=Sex.choices)
     email = models.EmailField(max_length=255, unique=True)
     phone = models.CharField(max_length=20, unique=True)
     birthday = models.DateField()

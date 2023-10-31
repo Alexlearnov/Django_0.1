@@ -14,7 +14,7 @@ h1.index_profession {
   color: #FFF;
 
   text-align: center;
-  font-family: Montserrat;
+  font-family: Antiqua, 'Helvetica Nue', sans-serif;
   font-size: 64px;
   font-style: normal;
   font-weight: 500;
@@ -59,9 +59,7 @@ nav>a:hover {
   text-decoration: underline;
 }
 div.index {
-  background: url(../images/1_122_1.png), lightgray 50% / cover no-repeat;
-  width: 2316px;
-  height: 1024px;
-  flex-shrink: 0;
+  background: url(../images/1_122_1.png);
+  background-size: cover;
 }
 
