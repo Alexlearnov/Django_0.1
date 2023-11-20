@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseNotFound
 from django.urls import reverse
-from women.models import User, Courses
+from women.models import User, Courses, Category
 
 
 # Create your views here.
@@ -22,16 +22,22 @@ def about_me(request):
     data = {'title': 'Обо мне'}
     return render(request, 'women/about_me.html', context=data)
 
-def courses(request):
-    course_lst = {"course_lst": (course for course in Courses.objects.all()),
-                 "title": "COURSES" }
-    return render(request, 'women/courses.html', context=course_lst)
 
-def course_by_slug(request, course_slug):
-    course = {"course": Courses.objects.get(slug=course_slug),
-              "title": get_object_or_404(Courses, slug=course_slug).name}
-    return render(request, 'women/one_course.html', context=course)
+def categories(request):
+    categories_lst = {"categories_lst": (category for category in Category.objects.all()),
+                 "title": "Categories" }
+    return render(request, 'women/categories.html', context=categories_lst)
 
+
+def category_by_slug(request, category_slug):
+    category = get_object_or_404(Category, slug=category_slug)
+    users = category.user_set.filter(cat=category)
+    data = {
+        "category": category,
+        "title": category.name,
+        "users": users,
+    }
+    return render(request, 'women/category.html', context=data)
 
 
 def sign_in(request):
