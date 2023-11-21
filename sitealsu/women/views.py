@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseNotFound
 from django.urls import reverse
-from women.models import User, Courses, Category
+from women.models import User, Category
 
 
 # Create your views here.
